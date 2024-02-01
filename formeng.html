@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women's Health Survey</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url("4912309.jpg") center/cover no-repeat fixed;
+        filter: blur(10px);
+      }
+
+      form {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h2,
+      h3 {
+        color: #e0501b;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Women's Health Survey</h2>
+
+      <!-- Section 1: Personal Information -->
+      <h3>1. Personal Information</h3>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="contactEmail">Email:</label>
+      <input type="email" id="contactEmail" name="contactEmail" required />
+
+      <label for="contactPhone">Phone:</label>
+      <input type="tel" id="contactPhone" name="contactPhone" required />
+
+      <!-- Section 2: Menstrual Health -->
+      <h3>2. Menstrual Health</h3>
+      <label for="menarche">Onset of Menstruation (Menarche):</label>
+      <input type="text" id="menarche" name="menarche" required />
+
+      <label for="menstrualRegularity">Regularity of Menstrual Cycles:</label>
+      <select id="menstrualRegularity" name="menstrualRegularity" required>
+        <option value="regular">Regular</option>
+        <option value="irregular">Irregular</option>
+      </select>
+
+      <label for="menstrualDuration"
+        >Duration and Flow of Menstrual Periods:</label
+      >
+      <textarea
+        id="menstrualDuration"
+        name="menstrualDuration"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="menstrualConcerns">Any Irregularities or Concerns:</label>
+      <textarea
+        id="menstrualConcerns"
+        name="menstrualConcerns"
+        rows="4"
+      ></textarea>
+
+      <!-- Section 3: Pregnancy and Reproductive History -->
+      <h3>3. Pregnancy and Reproductive History</h3>
+      <label for="numPregnancies">Number of Pregnancies:</label>
+      <input
+        type="number"
+        id="numPregnancies"
+        name="numPregnancies"
+        min="0"
+        required
+      />
+
+      <label for="pregnancyOutcomes"
+        >Pregnancy Outcomes (Live Births, Miscarriages, Abortions):</label
+      >
+      <textarea
+        id="pregnancyOutcomes"
+        name="pregnancyOutcomes"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="contraceptiveMethods">Contraceptive Methods Used:</label>
+      <textarea
+        id="contraceptiveMethods"
+        name="contraceptiveMethods"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="currentPregnancyStatus"
+        >Current Pregnancy Status (if applicable):</label
+      >
+      <textarea
+        id="currentPregnancyStatus"
+        name="currentPregnancyStatus"
+        rows="4"
+      ></textarea>
+
+      <!-- Section 4: Health History -->
+
+      <h3>4. Health History</h3>
+      <label for="preExistingConditions"
+        >Pre-existing Medical Conditions:</label
+      >
+      <textarea
+        id="preExistingConditions"
+        name="preExistingConditions"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="medications">Medications Currently Taken:</label>
+      <textarea
+        id="medications"
+        name="medications"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="gynecologicalConditions"
+        >History of Gynecological Conditions (Endometriosis, PCOS,
+        Fibroids):</label
+      >
+      <textarea
+        id="gynecologicalConditions"
+        name="gynecologicalConditions"
+        rows="4"
+        required
+      ></textarea>
+
+      <!-- Section 5: Lifestyle and Habits -->
+      <h3>5. Lifestyle and Habits</h3>
+      <label for="dietHabits">Diet and Nutrition Habits:</label>
+      <textarea id="dietHabits" name="dietHabits" rows="4" required></textarea>
+
+      <label for="exerciseRoutine">Exercise Routine:</label>
+      <textarea
+        id="exerciseRoutine"
+        name="exerciseRoutine"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="smokingHabits">Smoking Habits:</label>
+      <select id="smokingHabits" name="smokingHabits" required>
+        <option value="never">Never</option>
+        <option value="occasional">Occasional</option>
+        <option value="regular">Regular</option>
+      </select>
+
+      <label for="alcoholConsumption">Alcohol Consumption:</label>
+      <select id="alcoholConsumption" name="alcoholConsumption" required>
+        <option value="never">Never</option>
+        <option value="occasional">Occasional</option>
+        <option value="regular">Regular</option>
+      </select>
+
+      <!-- Section 6: Mental and Emotional Health -->
+      <h3>6. Mental and Emotional Health</h3>
+      <label for="stressLevels">Stress Levels:</label>
+      <select id="stressLevels" name="stressLevels" required>
+        <option value="low">Low</option>
+        <option value="moderate">Moderate</option>
+        <option value="high">High</option>
+      </select>
+
+      <label for="moodWellbeing">Mood and Emotional Well-being:</label>
+      <textarea
+        id="moodWellbeing"
+        name="moodWellbeing"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="mentalHealthHistory"
+        >Any History of Mental Health Conditions:</label
+      >
+      <textarea
+        id="mentalHealthHistory"
+        name="mentalHealthHistory"
+        rows="4"
+      ></textarea>
+
+      <!-- Section 7: Knowledge and Education -->
+      <h3>7. Knowledge and Education</h3>
+      <label for="menstrualHealthAwareness"
+        >Awareness about Menstrual Health:</label
+      >
+      <textarea
+        id="menstrualHealthAwareness"
+        name="menstrualHealthAwareness"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="pregnancyKnowledge"
+        >Understanding of Pregnancy-related Topics:</label
+      >
+      <textarea
+        id="pregnancyKnowledge"
+        name="pregnancyKnowledge"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="contraceptiveFamiliarity"
+        >Familiarity with Contraceptive Methods:</label
+      >
+      <textarea
+        id="contraceptiveFamiliarity"
+        name="contraceptiveFamiliarity"
+        rows="4"
+        required
+      ></textarea>
+
+      <!-- Section 8: Access to Healthcare -->
+      <h3>8. Access to Healthcare</h3>
+      <label for="gynecologicalCheckups"
+        >Regular Gynecological Check-ups:</label
+      >
+      <select id="gynecologicalCheckups" name="gynecologicalCheckups" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="healthServicesAccess"
+        >Access to Women's Health Services in the Area:</label
+      >
+      <textarea
+        id="healthServicesAccess"
+        name="healthServicesAccess"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="healthcareBarriers">Any Barriers to Healthcare Access:</label>
+      <textarea
+        id="healthcareBarriers"
+        name="healthcareBarriers"
+        rows="4"
+      ></textarea>
+
+      <!-- Section 9: Menopause (for applicable age group) -->
+      <h3>9. Menopause (for applicable age group)</h3>
+      <label for="ageOfMenopause">Age of Menopause (if reached):</label>
+      <input type="text" id="ageOfMenopause" name="ageOfMenopause" />
+
+      <label for="menopausalSymptoms"
+        >Menopausal Symptoms and Management:</label
+      >
+      <textarea
+        id="menopausalSymptoms"
+        name="menopausalSymptoms"
+        rows="4"
+      ></textarea>
+
+      <!-- Section 10: Additional Support Needs -->
+      <h3>10. Additional Support Needs</h3>
+      <label for="educationalResources"
+        >Would you be interested in educational resources about women's
+        health?</label
+      >
+      <select id="educationalResources" name="educationalResources" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="specificConcerns"
+        >Do you have specific questions or concerns you'd like addressed?</label
+      >
+      <textarea
+        id="specificConcerns"
+        name="specificConcerns"
+        rows="4"
+      ></textarea>
+
+      <!-- Section 11: Feedback and Suggestions -->
+      <h3>11. Feedback and Suggestions</h3>
+      <label for="improvements"
+        >How can we improve our women's healthcare initiatives?</label
+      >
+      <textarea id="improvements" name="improvements" rows="4"></textarea>
+
+      <label for="futureFeatures"
+        >Any specific topics or features you would like to see in the
+        future?</label
+      >
+      <textarea id="futureFeatures" name="futureFeatures" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
